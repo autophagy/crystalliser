@@ -2,7 +2,7 @@ PImage img;
 int chunkSize;
 
 void setup() {
-   img = loadImage("3.jpg");
+   img = loadImage("input.jpg");
    size(img.width, img.height);
    colorMode(RGB, 100);
    chunkSize = 10;
