@@ -20,8 +20,6 @@ void draw() {
    {
        for (int x = 0; x < width; x += chunkSize)
        {
-           //color colour = getAverageColour(x,y);
-           //drawColourBlock(colour, x, y);
            drawTriangles(x,y);
        }
    }
@@ -99,37 +97,4 @@ color  getAverageColourBottom(int xOrigin, int yOrigin)
   g = g/counter;
   b = b/counter;
   return color(r,g,b);
-}
-
-
-// OLD
-
-color getAverageColour(int xOrigin, int yOrigin)
-{
-  float r = 0;
-  float g = 0;
-  float b = 0;
-  float counter = 0;
-  for(int y = 0; y < chunkSize; y++)
-  {
-    for(int x = 0; x < chunkSize; x++)
-    {
-      counter++;
-      color c = img.pixels[(xOrigin + x) + ((yOrigin + y) * width)];
-      r += red(c);
-      g += green(c);
-      b += blue(c);
-    }
-  }
-  
-  r = r/counter;
-  g = g/counter;
-  b = b/counter;
-  return color(r,g,b);
-}
-
-void drawColourBlock(color colour, int xOrigin, int yOrigin)
-{
-  fill(colour);
-  rect(xOrigin, yOrigin, chunkSize, chunkSize);  
 }
