@@ -3,10 +3,12 @@ A Processing project that crystallises a given image into triangles. Essentially
 
 An example of the output it produces:
 
-Input Image
+####Input Image
+
 ![alt text](http://i.imgur.com/MpPghfa.jpg "Example input image")
 
-Output Image
+####Output Image
+
 ![alt text](http://i.imgur.com/ohBpvMW.png "Example output image")
 
 ## TODO
