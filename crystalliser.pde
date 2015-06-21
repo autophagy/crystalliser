@@ -13,8 +13,7 @@ void setup() {
    background(0);
 }
 
-void draw() {   
- 
+void draw() {    
   
    for (int y = 0; y < height; y += chunkSize)
    {
@@ -77,20 +76,20 @@ color  getAverageColourBottom(int xOrigin, int yOrigin)
   float b = 0;
   float counter = 0;
   
-  float xReduce = 1;
+  float xReduce = 0;
   
   for(int y = 0; y < chunkSize; y++)
   {
-      for(int x = chunkSize; x > chunkSize - xReduce; x--)
+      for(int x = chunkSize; x >= chunkSize - xReduce; x--)
       {
         counter++;
-        color c = img.pixels[(xOrigin + x) + ((yOrigin + y) * width)];
+        color c = img.pixels[(xOrigin + x) + ((yOrigin + y) * width)-1];
         r += red(c);
         g += green(c);
         b += blue(c);
       }
       
-      xReduce--;  
+      xReduce++;  
   }
 
   r = r/counter;
