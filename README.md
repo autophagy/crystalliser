@@ -16,3 +16,4 @@ An example of the output it produces:
 - Currently only works on images with dimensions that are completely divisible by 10, otherwise the application crashes. An obviously lazy implementation, it should either crop the image until the dimensions are divisible by 10 or dynamically changing the 'chunk size' to accomodate the dimensions, or a combination.
 - Need to fix the weird wrap-around effect where triangles drawn from the left hand side of the image are written on the right margin.
 - Need to put in a file dialog that allows you to pick an image rather than just using a hardcoded image name.
+- Consider porting to Javascript? Mainly so it can be used On The Net
